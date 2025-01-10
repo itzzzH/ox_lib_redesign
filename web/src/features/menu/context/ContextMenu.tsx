@@ -18,7 +18,7 @@ const useStyles = createStyles((theme) => ({
     position: 'absolute',
     top: '15%',
     right: '25%',
-    width: 320,
+    width: 322,
     height: 580,
   },
   header: {
@@ -30,12 +30,18 @@ const useStyles = createStyles((theme) => ({
   titleContainer: {
     borderRadius: 4,
     flex: '1 85%',
-    backgroundColor: theme.colors.dark[6],
+    //backgroundColor: 'rgba(51, 0, 0, 0.89)',
+   // boxShadow: 'inset 0px 20px 20px rgba(0, 0, 0, 0.8)',
   },
   titleText: {
-    color: theme.colors.dark[0],
+    color: 'rgba(255, 255, 255, 0.89)',
+    fontFamily: 'Oswald',
+    textTransform: 'uppercase',
     padding: 6,
-    textAlign: 'center',
+    textAlign: 'left',
+    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.73)', // Adds a subtle shadow
+    letterSpacing: '2px', // Add spacing between letters
+    textDecoration: 'underline', // Add this line
   },
   buttonsContainer: {
     height: 560,
