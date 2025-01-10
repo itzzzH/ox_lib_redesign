@@ -21,38 +21,56 @@ const useStyles = createStyles((theme, params: { disabled?: boolean; readOnly?: 
   },
   label: {
     width: '100%',
-    color: params.disabled ? theme.colors.dark[3] : theme.colors.dark[0],
+    color: params.disabled ? 'rgba(110, 110, 110, 0.89)' : 'rgba(255, 255, 255, 0.93)',
+    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.73)', // Adds a subtle shadow
+    letterSpacing: '2px', // Add spacing between letters
     whiteSpace: 'pre-wrap',
   },
   button: {
     height: 'fit-content',
     width: '100%',
     padding: 10,
+    backgroundColor: 'rgba(15, 15, 15, 0.36)',
+    //boxShadow: 'inset 2px 2px 20px rgba(0, 0, 0, 0.23)',
+    //border: '0.5px solid rgba(0, 0, 0, 0.18)',
+   // overflow: 'hidden', // Add this line
     '&:hover': {
-      backgroundColor: params.readOnly ? theme.colors.dark[6] : undefined,
+      background: 'linear-gradient(to left, rgba(112, 0, 201, 0.46) 40%, rgba(15, 15, 15, 0.36) 60%)',
       cursor: params.readOnly ? 'unset' : 'pointer',
     },
     '&:active': {
       transform: params.readOnly ? 'unset' : undefined,
     },
-  },
+    '&:disabled': {
+      backgroundColor: 'rgba(15, 15, 15, 0.36)',
+      //boxShadow: 'inset 2px 2px 20px rgba(0, 0, 0, 0.23)',
+    },
+  },  
   iconImage: {
     maxWidth: '25px',
   },
   description: {
-    color: params.disabled ? theme.colors.dark[3] : theme.colors.dark[2],
+    fontFamily: 'Oswald',
+    color: params.disabled ? 'rgba(122, 122, 122, 0.89)' : 'rgba(211, 211, 211, 0.89)',
+    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.73)', // Adds a subtle shadow
+    letterSpacing: '1px', // Add spacing between letters
     fontSize: 12,
   },
   dropdown: {
+    position: 'absolute',
     padding: 10,
-    color: theme.colors.dark[0],
+    Color: 'rgba(2, 0, 0, 0.84)',
     fontSize: 14,
     maxWidth: 256,
     width: 'fit-content',
     border: 'none',
+    backgroundColor: 'rgba(112, 0, 201, 0.74)',
+    letterSpacing: '2px', // Add spacing between letters
+    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.73)', // Adds a subtle shadow
+    //background: 'linear-gradient(to left, rgba(248, 0, 116, 0.89), rgba(0, 0, 0, 0))',
   },
   buttonStack: {
-    gap: 4,
+    gap: 6,
     flex: '1',
   },
   buttonGroup: {
@@ -67,6 +85,8 @@ const useStyles = createStyles((theme, params: { disabled?: boolean; readOnly?: 
   },
   buttonTitleText: {
     overflowWrap: 'break-word',
+    fontFamily: 'Oswald',
+    textTransform: 'uppercase',
   },
   buttonArrowContainer: {
     justifyContent: 'center',
